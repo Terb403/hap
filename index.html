@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 สุขสันต์วันเกิด! 🎉</h1>
+        <p>เป็นสาว 17 ละนี่</p>
+        <p>🎂ใส่ชื่อด้านล่างเพื่อรับคำอวยพรจากสุดหล่อ🎈</p>
+        <input type="text" id="name" placeholder="ใส่ชื่ออออ" />
+        <button onclick="displayMessage()">รับพร</button>
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <script>
+        function displayMessage() {
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message');
+            if (name) {
+                message.innerText = `🎉 สุขสันต์วันเกิดดดดด มีความสุขมาก ๆ มีสติกับชีวิต สมปราถนาทุกประการ ยิ้มเยอะ ๆ --- รักนะะ<3, ${name}! 🎉`;
+                message.classList.remove('hidden');
+            } else {
+                message.innerText = 'กรุณากรอกชื่อ!';
+                message.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
